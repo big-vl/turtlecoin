@@ -94,6 +94,7 @@ class Language:
     def __init__(self, *args, **kwargs):
         print("Inicialization module language...")
         self.db = LiteDB()
+        self.translator = Translator()
         self.flags_list = [
             "🏳️",
             "🏴",
@@ -461,7 +462,6 @@ class Language:
             return {"text": text, "translate": False}
         else:
             try:
-                self.translator = Translator()
                 text_ = self.translator.translate(
                     self.language_translate["us"][text], dest=lang
                 )
