@@ -1,0 +1,23 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+googletrans = "==3.1.0a0"
+
+[packages]
+requests = "*"
+googletrans = "==3.1.0a0"
+telethon = "*"
+opencv-python = "*"
+qrcode = "*"
+pillow = "*"
+numpy = "*"
+pyzbar = "*"
+
+[requires]
+python_version = "3.9"
+
+[pipenv]
+allow_prereleases = true
