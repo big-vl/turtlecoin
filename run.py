@@ -552,7 +552,7 @@ class Subbot(TelegramClient, Wares, Buttons, Misc):
                     user_obj.hide_lang = False
                 else:
                     user_obj.hide_lang = True
-                message_option = "Choose an option: {choice}".format(
+                message_option = "{choice}".format(
                     choice=check_button_text
                 )
                 hide_show_lang = await self.send_message(
@@ -560,7 +560,6 @@ class Subbot(TelegramClient, Wares, Buttons, Misc):
                     message=message_option.format(choice=message),
                     buttons=self.buttons_menu(user_obj),
                 )
-                await self.delete_messages(event.chat_id, hide_show_lang)
             elif option_button == "{all_balance}":
                 security = await self.security_pincode_menu(event, user_obj)
                 if security is True:
