@@ -16,7 +16,6 @@ class Wares:
         wallet_address = self.language.message("{wallet_address}", user_obj)
         your_main_wallet = self.language.message("{your_main_wallet}", user_obj)
         total_balance_ = self.language.message("{all_balance}", user_obj)
-        # print("total_balance", total_balance)
         format_msg_total = "**%s**\n**%s %s**\n**%s %s**\n\n"
         format_msg_main_wallet = "**%s #1:**\n`%s`\n**%s %s**\n**%s %s**\n\n"
         format_msg_sub_wallet = "**%s #%s:**\n`%s`\n**%s %s**\n**%s %s**\n\n"
@@ -30,7 +29,6 @@ class Wares:
         message_ += format_msg_main_wallet % (
             your_main_wallet,
             main_wallet,
-            # main_wallet_balance["address"],
             get_balance_confirmed,
             main_wallet_balance["unlocked"],
             get_balance_unconfirmed,
